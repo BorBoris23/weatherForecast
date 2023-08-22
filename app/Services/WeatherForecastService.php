@@ -26,8 +26,8 @@ class WeatherForecastService
         foreach ($arr as $item) {
             $result[] = [
                 'date'=> date("Y-m-d",strtotime(($item->dt_txt))),
-                'temperature'=> round($item->main->temp),
-                'cloudiness'=>round($item->clouds->all, -1),
+                'temperature' => round($item->main->temp),
+                'cloudiness' => round($item->clouds->all, -1),
             ];
         }
         return $result;
